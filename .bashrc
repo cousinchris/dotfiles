@@ -4,6 +4,8 @@ PS1='\u@\h:\w\$ '
 # Make bash append rather than overwrite the history on disk
 # shopt -s histappend
 
+# test
+
 # check the hash before searching the PATH directories
 shopt -s checkhash
 
