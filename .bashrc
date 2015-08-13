@@ -77,5 +77,3 @@ alias sl='openssl crl -noout -text -inform DER -in '
 alias p12='openssl pkcs12 -in '
 alias p10='openssl req -noout -text -in '
 alias b64='openssl enc -d -base64 -in '
-
-
