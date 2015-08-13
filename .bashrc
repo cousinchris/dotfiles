@@ -6,6 +6,8 @@ PS1='\u@\h:\w\$ '
 
 # test
 
+# test 2
+
 # check the hash before searching the PATH directories
 shopt -s checkhash
 
