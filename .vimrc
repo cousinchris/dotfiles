@@ -1,17 +1,18 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
-Plug 'sbdchd/neoformat'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'sbdchd/neoformat'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'svermeulen/vim-easyclip'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -185,7 +186,7 @@ endif
 " fzf
 """""""""""""""""""""""""""""""
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 "let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 "let $FZF_DEFAULT_OPTS="--preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null'"
 "let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
@@ -251,14 +252,41 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 " ale
 """""""""""""""""""""""""""""""
 
-" Fix files with prettier
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'],
-            \       'javascript': ['prettier'],
-            \       'html': ['prettier']
-            \}
+" keep gutter open
+let g:ale_sign_column_always = 1
+
+" fixers and linters
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['js-beautify', 'prettier'], 'html': ['html-beautify']}
+let g:ale_linters = {'html': ['htmlhint'], 'javascript': ['tsserver']}
+
+nmap <Leader>p :ALEFix<CR>
 
 """""""""""""""""""""""""""""""
 " Neoformat
 """""""""""""""""""""""""""""""
 
-nmap <Leader>p :Neoformat<CR>
+"nmap <Leader>p :Neoformat<CR>
+
+
+"""""""""""""""""""""""""""""""
+" easyclip
+"""""""""""""""""""""""""""""""
+
+let g:EasyClipAutoFormat=0
+let g:EasyClipYankHistorySize=50
+let g:EasyClipCopyExplicitRegisterToDefault=0
+let g:EasyClipAlwaysMoveCursorToEndOfPaste=0
+let g:EasyClipPreserveCursorPositionAfterYank=0
+let g:EasyClipShowYanksWidth=80
+
+let g:EasyClipShareYanks=0                      " write yanks into file so they can be shared between vim instances
+let g:EasyClipShareYanksFile=".easyclip"
+let g:EasyClipShareYanksDirectory="$HOME"
+
+let g:EasyClipUseYankDefaults=1
+let g:EasyClipUseCutDefaults=1
+let g:EasyClipUsePasteDefaults=1
+let g:EasyClipEnableBlackHoleRedirect=1
+let g:EasyClipUsePasteToggleDefaults=0          " disable bindings <CTRL-N> and <CTRL-P>
+let g:EasyClipUseSubstituteDefaults=0
+

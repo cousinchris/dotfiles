@@ -56,3 +56,5 @@ end
 function X86
     echo '(X86)'
 end
+
+set -U fish_user_paths ~/.npm-global/bin $fish_user_paths
