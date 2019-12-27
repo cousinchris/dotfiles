@@ -106,6 +106,14 @@ let mapleader=","
 set ttimeoutlen=50
 set history=100
 
+# mouse support
+set mouse=a
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+
 " undo
 set undolevels=1000             " How many undos
 set undoreload=10000            " number of lines to save for undo
