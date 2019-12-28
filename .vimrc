@@ -106,7 +106,7 @@ let mapleader=","
 set ttimeoutlen=50
 set history=100
 
-# mouse support
+" mouse support
 set mouse=a
 if has("mouse_sgr")
     set ttymouse=sgr
