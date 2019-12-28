@@ -1,5 +1,5 @@
 
-set -g theme_display_git yes
+set -g theme_display_git no
 set -g theme_display_git_dirty yes
 set -g theme_display_git_untracked no
 set -g theme_display_git_ahead_verbose no
