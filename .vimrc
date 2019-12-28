@@ -26,7 +26,7 @@ call plug#end()
 syntax on
 set ttytype=xterm-256color
 set t_Co=256
-colorscheme plastic
+colorscheme nord
 if (has('termguicolors'))
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -153,7 +153,7 @@ let g:airline_inactive_collapse=1
 " defines whether the preview window should be excluded from have its window statusline modified
 " (may help with plugins which use the preview window heavily)
 let g:airline_exclude_preview = 0
-let g:airline_theme             = 'onedark'
+let g:airline_theme             = 'nord'
 "let g:airline_theme             = 'powerlineish'
 let g:airline_enable_branch     = 1
 let g:airline_enable_syntastic  = 1

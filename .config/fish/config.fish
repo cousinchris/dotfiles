@@ -1,11 +1,11 @@
 
 set -g theme_display_git yes
 set -g theme_display_git_dirty yes
-set -g theme_display_git_untracked yes
-set -g theme_display_git_ahead_verbose yes
-set -g theme_display_git_dirty_verbose yes
-set -g theme_display_git_stashed_verbose yes
-set -g theme_display_git_master_branch yes
+set -g theme_display_git_untracked no
+set -g theme_display_git_ahead_verbose no
+set -g theme_display_git_dirty_verbose no
+set -g theme_display_git_stashed_verbose no
+set -g theme_display_git_master_branch no
 set -g theme_git_worktree_support no # buggy
 set -g theme_use_abbreviated_branch_name yes
 set -g theme_display_vagrant no
