@@ -2,7 +2,7 @@ alias vi='nvim'
 
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --glob "!.git/*"'
 
-set -g theme_display_git no
+set -g theme_display_git yes
 set -g theme_display_git_dirty yes
 set -g theme_display_git_untracked no
 set -g theme_display_git_ahead_verbose no
@@ -33,7 +33,7 @@ set -g theme_powerline_fonts no
 set -g theme_nerd_fonts yes
 set -g theme_show_exit_status yes
 set -g theme_display_jobs_verbose yes
-set -g default_user your_normal_user
+set -g default_user kk
 set -g theme_color_scheme base16
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_project_dir_length 1
