@@ -1,3 +1,6 @@
+alias vi='nvim'
+
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --glob "!.git/*"'
 
 set -g theme_display_git no
 set -g theme_display_git_dirty yes
