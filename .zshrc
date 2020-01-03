@@ -81,6 +81,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+PATH=$PATH:~/bin
+
 # zsh-history-substring-search
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
@@ -113,3 +115,4 @@ autoload -Uz compinit && compinit -i
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
